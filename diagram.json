@@ -1,0 +1,90 @@
+{
+    "version": 1,
+    "author": "Manzip",
+    "editor": "wokwi",
+    "parts": [
+        {
+            "type": "wokwi-esp32-devkit-v1",
+            "id": "esp",
+            "top": -91.3,
+            "left": 81.4,
+            "attrs": {}
+        },
+        {
+            "type": "wokwi-dht22",
+            "id": "dht1",
+            "top": -76.5,
+            "left": -43.8,
+            "attrs": {}
+        }
+    ],
+    "connections": [
+        [
+            "esp:TX0",
+            "$serialMonitor:RX",
+            "",
+            []
+        ],
+        [
+            "esp:RX0",
+            "$serialMonitor:TX",
+            "",
+            []
+        ],
+        [
+            "r3:1",
+            "led4:A",
+            "green",
+            [
+                "v0"
+            ]
+        ],
+        [
+            "led4:C",
+            "esp:GND.1",
+            "green",
+            [
+                "v138.64",
+                "h-88.39",
+                "v102.35",
+                "h600.84",
+                "v-182.05"
+            ]
+        ],
+        [
+            "r3:2",
+            "esp:D2",
+            "green",
+            [
+                "v99.14",
+                "h278.51",
+                "v-37.5"
+            ]
+        ],
+        [
+            "dht1:VCC",
+            "esp:VIN",
+            "red",
+            [
+                "v0"
+            ]
+        ],
+        [
+            "dht1:GND",
+            "esp:GND.2",
+            "black",
+            [
+                "v0"
+            ]
+        ],
+        [
+            "dht1:SDA",
+            "esp:D13",
+            "green",
+            [
+                "v0"
+            ]
+        ]
+    ],
+    "dependencies": {}
+}
